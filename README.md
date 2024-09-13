@@ -1,1 +1,1 @@
-These are yhe projects that are done for learning and for fun.
+These are the projects that are done for learning and for fun.
