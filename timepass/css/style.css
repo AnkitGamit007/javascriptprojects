@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+.container{
+    
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 90vw;
+    /* overflow: hidden; */
+}
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    height: 80vh;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    color: white;
+    flex: 1;
+    transition: all 700ms ease-in;
+}
+
+
+.panel h3{
+    position:absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+  }
+
+  .panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }

@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+
+}
+
+:root{
+    --line-border-fill: #9c27b0;
+    --line-border-empty: #bdbdbd;
+}
+
+body{
+    flex-direction: column;
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+h1{
+    color: #212121;
+    margin-bottom: 90px ;
+}
+
+.fa-html5{
+    font-size: 1.8rem;
+    color: #ff5773;
+}
+
+.fa-css3-alt{
+    font-size: 1.8rem;
+    color:#264de4 ;
+}
+
+.fa-js{
+    font-size: 1.6rem;
+    color: #f7e018;
+}
+
+.fa-react{
+font-size: 1.8rem;
+color: #61dbfb;
+}
+
+.container{
+    text-align: center;
+}
+
+.progress-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+.progress{
+   background-color: var(--line-border-fill);
+   position: absolute;
+   top: 50%;
+   left: 0;
+   transform:translateY(-50%);
+   height: 4px;
+   width: 0%;
+   z-index: -1;
+   transition: .4s ease ;
+}
+
+.progress-container::before{
+    content: "";
+    background-color: var(--line-border-empty);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform:translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+    transition: .4s ease ;
+ }
+
+ .circle{
+    background-color: white;
+    color: #999;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border:4px solid #b2bec3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s ease;
+ }
+
+ .circle.active{
+    border-color: var(--line-border-fill);
+ }
+
+ .btn{
+    background-color: var(--line-border-fill);
+    color: #ffff;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+ }
+
+ .btn:focus{
+    outline: 0;
+ }
+
+ .btn:active{
+    /* transform: scale(.97); */
+   
+    background-color: #9b27b0ac;
+    animation: tilt-n-move-shaking 0.25s infinite; 
+ }
+ .btn:hover {
+ }
+ .btn:disabled{
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
+ }
+
+ @keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
+ 
